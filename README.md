@@ -7,7 +7,7 @@
 > Capstone project by Farjana Ferdausi, AI & ML Engineering Bootcamp, Module-27, Batch-6, Ostad.
 > It is not an official government service and is not affiliated with any government office.
 
-**Detailed proposal page:** https://farjanaferdausi-cs50ai.github.io/esbc-ai/
+**Detailed proposal page:** https://farjanaferdausi-cs50ai.github.io/ESBC-AI-Proposal/
 **One-page proposal (PDF):** [ESBC-AI_Project_Proposal.pdf](ESBC-AI_Project_Proposal.pdf)
 
 ## The problem

@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>TR Enterprise | Enterprise AI and Data Solutions, Bangladesh</title>
+<meta name="description" content="TR Enterprise builds AI chatbots, computer vision and data agents in Bangladesh. A registered 1st class contractor firm in Birampur, Dinajpur, with a dedicated technology division.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 512 512%22 role=%22img%22 aria-label=%22TR Enterprise logo%22%3E%3Cdefs%3E%3ClinearGradient id=%22fg%22 gradientUnits=%22userSpaceOnUse%22 x1=%2290%22 y1=%2270%22 x2=%22430%22 y2=%22450%22%3E%3Cstop offset=%220%22 stop-color=%22%2339FF14%22/%3E%3Cstop offset=%220.55%22 stop-color=%22%237DFF5A%22/%3E%3Cstop offset=%221%22 stop-color=%22%2358C8FF%22/%3E%3C/linearGradient%3E%3CradialGradient id=%22fr%22 gradientUnits=%22userSpaceOnUse%22 cx=%22256%22 cy=%22256%22 r=%22230%22%3E%3Cstop offset=%220%22 stop-color=%22%2339FF14%22 stop-opacity=%220.20%22/%3E%3Cstop offset=%221%22 stop-color=%22%2339FF14%22 stop-opacity=%220%22/%3E%3C/radialGradient%3E%3C/defs%3E%3Cpolygon points=%22256.0,36.0 446.5,146.0 446.5,366.0 256.0,476.0 65.5,366.0 65.5,146.0%22 fill=%22%230A0D14%22/%3E%3Cpolygon points=%22256.0,36.0 446.5,146.0 446.5,366.0 256.0,476.0 65.5,366.0 65.5,146.0%22 fill=%22url(%23fr)%22/%3E%3Cpolygon points=%22256.0,60.0 425.7,158.0 425.7,354.0 256.0,452.0 86.3,354.0 86.3,158.0%22 fill=%22none%22 stroke=%22%2358C8FF%22 stroke-opacity=%220.28%22 stroke-width=%222%22/%3E%3Cpolygon points=%22256.0,36.0 446.5,146.0 446.5,366.0 256.0,476.0 65.5,366.0 65.5,146.0%22 fill=%22none%22 stroke=%22url(%23fg)%22 stroke-width=%227%22 stroke-linejoin=%22round%22/%3E%3Ccircle cx=%22256.0%22 cy=%2236.0%22 r=%229%22 fill=%22%2358C8FF%22/%3E%3Ccircle cx=%22446.5%22 cy=%22366.0%22 r=%229%22 fill=%22%2358C8FF%22/%3E%3Ccircle cx=%2265.5%22 cy=%22366.0%22 r=%229%22 fill=%22%2358C8FF%22/%3E%3Cg transform=%22translate(2,5)%22 fill=%22none%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M130,181 H250 M190,181 V321 M290,181 V321 M290,181 H330 A45,45 0 0 1 330,271 H290 M328,271 L378,321%22 stroke=%22url(%23fg)%22 stroke-opacity=%220.22%22 stroke-width=%2244%22/%3E%3Cpath d=%22M130,181 H250 M190,181 V321 M290,181 V321 M290,181 H330 A45,45 0 0 1 330,271 H290 M328,271 L378,321%22 stroke=%22url(%23fg)%22 stroke-width=%2226%22/%3E%3Cpath d=%22M190,321 V352 H290 V321%22 stroke=%22%2358C8FF%22 stroke-width=%225%22/%3E%3Ccircle cx=%22130%22 cy=%22181%22 r=%2213%22 fill=%22%2358C8FF%22/%3E%3Ccircle cx=%22130%22 cy=%22181%22 r=%225%22 fill=%22%2307080C%22/%3E%3Ccircle cx=%22190%22 cy=%22321%22 r=%2213%22 fill=%22%2358C8FF%22/%3E%3Ccircle cx=%22190%22 cy=%22321%22 r=%225%22 fill=%22%2307080C%22/%3E%3Ccircle cx=%22290%22 cy=%22321%22 r=%2213%22 fill=%22%2358C8FF%22/%3E%3Ccircle cx=%22290%22 cy=%22321%22 r=%225%22 fill=%22%2307080C%22/%3E%3Ccircle cx=%22378%22 cy=%22321%22 r=%2213%22 fill=%22%2358C8FF%22/%3E%3Ccircle cx=%22378%22 cy=%22321%22 r=%225%22 fill=%22%2307080C%22/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #07080C; --bg-rgb: 7,8,12;
+    --surface: #0F1219; --surface-2: #151A26;
+    --line: rgba(255,255,255,0.09); --line-accent: rgba(57,255,20,0.38);
+    --text: #8ED1F0; --muted: #7FA9C4;
+    --accent: #39FF14; --accent-2: #9BFF7D; --accent-3: #0FBF5A; --neon: #58C8FF;
+    --accent-grad: linear-gradient(135deg, #C8FFB8 0%, #39FF14 48%, #0FBF5A 100%);
+    --display: "Playfair Display", Georgia, "Times New Roman", serif;
+    --body: "Manrope", "Segoe UI", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; color-scheme: dark; }
+  body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--body); font-size: 1.0625rem; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+  a { color: var(--accent-2); text-underline-offset: 3px; }
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, [role="tab"]:focus-visible { outline: 3px solid var(--neon); outline-offset: 3px; }
+  .wrap { max-width: 76rem; margin: 0 auto; padding: 0 1.5rem; }
+  h1, h2, h3 { margin: 0; font-weight: 600; line-height: 1.15; }
+  h1, h2 { font-family: var(--display); letter-spacing: -0.01em; }
+  h3 { font-family: var(--body); font-weight: 700; letter-spacing: -0.005em; }
+  .eyebrow { display: block; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
+
+  /* Nav */
+  header.top { position: sticky; top: 0; z-index: 20; background: rgba(var(--bg-rgb), 0.78); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--line); }
+  header.top .wrap { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding-top: 0.85rem; padding-bottom: 0.85rem; flex-wrap: wrap; }
+  .mark { display: inline-flex; align-items: center; gap: 0.8rem; text-decoration: none; color: var(--text); }
+  .mark i { width: 2.3rem; height: 2.3rem; border: 1px solid var(--accent); display: grid; place-items: center; font-family: var(--display); font-style: normal; font-weight: 700; font-size: 0.95rem; color: var(--accent-2); }
+  .mark b { font-weight: 700; letter-spacing: 0.2em; font-size: 0.85rem; }
+  .mark svg { width: 2.6rem; height: 2.6rem; display: block; flex: none; }
+  .navr { display: flex; align-items: center; gap: 1.6rem; flex-wrap: wrap; }
+  .navr a { text-decoration: none; color: var(--muted); font-weight: 600; font-size: 0.92rem; }
+  .navr a:hover { color: var(--accent-2); }
+  .navr a.cta { color: var(--accent-2); border: 1px solid var(--line-accent); padding: 0.5rem 1.2rem; }
+  .navr a.cta:hover { background: rgba(57,255,20,0.1); }
+
+  /* Buttons */
+  .btn { display: inline-block; padding: 0.95rem 1.9rem; text-decoration: none; font-weight: 700; font-size: 0.95rem; letter-spacing: 0.04em; border: 1px solid transparent; cursor: pointer; font-family: var(--body); transition: transform .2s, box-shadow .2s, background .2s; }
+  .btn.accent { background: var(--accent-grad); color: #03140A; box-shadow: 0 10px 30px rgba(57,255,20,0.22); }
+  .btn.accent:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(57,255,20,0.34); }
+  .btn.line { color: var(--text); border-color: rgba(142,209,240,0.45); margin-left: 0.7rem; background: transparent; }
+  .btn.line:hover { border-color: var(--accent); color: var(--accent-2); }
+
+  /* Hero */
+  .hero { position: relative; overflow: hidden; border-bottom: 1px solid var(--line); }
+  .hero::before { content: ""; position: absolute; inset: 0; background:
+      radial-gradient(60% 55% at 12% 8%, rgba(57,255,20,0.16), transparent 70%),
+      radial-gradient(45% 45% at 92% 62%, rgba(88,200,255,0.11), transparent 70%); }
+  .grid-bg { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.045) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.045) 1px, transparent 1px); background-size: 64px 64px; -webkit-mask-image: radial-gradient(ellipse 75% 70% at 50% 40%, #000 25%, transparent 78%); mask-image: radial-gradient(ellipse 75% 70% at 50% 40%, #000 25%, transparent 78%); }
+  #net { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+  .hero .wrap { position: relative; z-index: 2; padding-top: 7rem; padding-bottom: 7rem; }
+  .hero .eyebrow { display: inline-flex; align-items: center; gap: 0.7rem; }
+  .hero .eyebrow::before { content: ""; width: 0.5rem; height: 0.5rem; border-radius: 50%; background: var(--accent); box-shadow: 0 0 12px var(--accent); }
+  .hero h1 { font-size: clamp(2.6rem, 7vw, 5.4rem); font-weight: 600; max-width: 15ch; }
+  .hero h1 em { font-style: italic; background: var(--accent-grad); -webkit-background-clip: text; background-clip: text; color: transparent; padding-right: 0.05em; }
+  .hero p.lead { font-size: 1.2rem; max-width: 37rem; margin: 1.6rem 0 2.4rem; color: #A8DCF3; }
+
+  /* Credentials strip */
+  .creds { display: grid; grid-template-columns: repeat(4, 1fr); border-bottom: 1px solid var(--line); background: var(--bg-2, #0B0D13); }
+  .cred { padding: 1.6rem 1.5rem; border-left: 1px solid var(--line); }
+  .cred:first-child { border-left: 0; }
+  .cred small { display: block; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 0.35rem; }
+  .cred span { font-weight: 600; font-size: 0.98rem; line-height: 1.45; display: block; }
+
+  /* Sections */
+  section { padding: 6.5rem 0 0; }
+  .head { max-width: 44rem; margin-bottom: 3.2rem; }
+  .head h2 { font-size: clamp(2rem, 4.4vw, 3.1rem); }
+  .head p { color: var(--muted); margin: 1rem 0 0; }
+
+  /* Capabilities */
+  .caps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+  .cap { border-top: 1px solid var(--line-accent); padding-top: 1.4rem; transition: border-color .25s; }
+  .cap:hover { border-top-color: var(--neon); }
+  .cap .no { font-family: var(--display); font-size: 1.5rem; color: var(--accent); display: block; margin-bottom: 0.8rem; }
+  .cap h3 { font-size: 1.15rem; margin-bottom: 0.6rem; }
+  .cap p { margin: 0; color: var(--muted); font-size: 0.98rem; }
+
+  /* Explorer */
+  .explorer { display: grid; grid-template-columns: 17rem 1fr; border: 1px solid var(--line); background: var(--surface); }
+  .tabs { display: flex; flex-direction: column; border-right: 1px solid var(--line); }
+  [role="tab"] { text-align: left; font-family: var(--body); font-weight: 700; font-size: 1rem; padding: 1.4rem 1.6rem; background: transparent; color: var(--muted); border: 0; border-bottom: 1px solid var(--line); border-left: 3px solid transparent; cursor: pointer; transition: all .2s; }
+  [role="tab"]:last-child { border-bottom: 0; }
+  [role="tab"]:hover { color: var(--text); background: rgba(255,255,255,0.03); }
+  [role="tab"][aria-selected="true"] { color: var(--accent-2); background: var(--surface-2); border-left-color: var(--neon); }
+  .panel { padding: 2.4rem; }
+  .steps { list-style: none; margin: 0; padding: 0; position: relative; }
+  .steps::before { content: ""; position: absolute; left: 1.05rem; top: 0.5rem; bottom: 0.5rem; width: 1px; background: linear-gradient(var(--accent), rgba(57,255,20,0.1)); }
+  .steps li { position: relative; padding: 0 0 1.5rem 3.4rem; animation: rise .45s both; }
+  .steps li:nth-child(2) { animation-delay: .07s; } .steps li:nth-child(3) { animation-delay: .14s; } .steps li:nth-child(4) { animation-delay: .21s; } .steps li:nth-child(5) { animation-delay: .28s; }
+  @keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+  .steps .n { position: absolute; left: 0; top: 0; width: 2.1rem; height: 2.1rem; border-radius: 50%; background: var(--surface); border: 1px solid var(--accent); color: var(--accent-2); display: grid; place-items: center; font-weight: 700; font-size: 0.85rem; }
+  .steps h3 { font-size: 1.05rem; }
+  .steps p { margin: 0.1rem 0 0; color: var(--muted); font-size: 0.98rem; }
+  .outcome { margin: 0.6rem 0 0; padding: 1.1rem 1.3rem; border: 1px solid var(--line-accent); background: rgba(57,255,20,0.06); }
+
+  /* Portfolio */
+  .rows { border-top: 1px solid var(--line); }
+  .row { display: grid; grid-template-columns: 3.5rem 1.5fr 1fr; gap: 1.5rem; align-items: start; padding: 1.9rem 0.5rem; border-bottom: 1px solid var(--line); transition: background .25s, padding .25s; }
+  .row:hover { background: linear-gradient(90deg, rgba(57,255,20,0.07), transparent 70%); padding-left: 1.2rem; }
+  .row .i { font-family: var(--display); font-size: 1.3rem; color: var(--accent); }
+  .row h3 { font-size: 1.35rem; font-family: var(--display); font-weight: 600; margin-bottom: 0.4rem; }
+  .row p { margin: 0; color: var(--muted); }
+  .row p a { font-weight: 700; }
+  .tags { display: flex; flex-wrap: wrap; gap: 0.45rem; margin: 0; padding: 0; list-style: none; align-self: center; }
+  .tags li { font-size: 0.8rem; font-weight: 600; color: var(--accent-2); border: 1px solid var(--line-accent); padding: 0.15rem 0.7rem; letter-spacing: 0.02em; }
+  .more { margin: 1.8rem 0 0; font-weight: 700; }
+
+  /* Company */
+  .company { display: grid; grid-template-columns: 1.1fr 1fr; gap: 3.5rem; }
+  .company p { color: #A8DCF3; margin: 0 0 1.1rem; }
+  .facts { margin: 1.8rem 0 0; display: grid; grid-template-columns: max-content 1fr; gap: 0.8rem 2rem; padding-top: 1.6rem; border-top: 1px solid var(--line-accent); }
+  .facts dt { font-weight: 700; color: var(--accent-2); }
+  .facts dd { margin: 0; color: var(--muted); }
+  .leaders { display: grid; gap: 1.1rem; align-content: start; }
+  .person { display: flex; gap: 1.3rem; padding: 1.7rem; border: 1px solid var(--line); background: var(--surface); }
+  .av { flex: none; width: 3.8rem; height: 3.8rem; border-radius: 50%; border: 1px solid var(--accent); display: grid; place-items: center; font-family: var(--display); font-weight: 600; font-size: 1.2rem; color: var(--accent-2); background: rgba(57,255,20,0.08); }
+  .person h3 { font-size: 1.15rem; }
+  .role { display: block; color: var(--accent); font-weight: 700; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; margin: 0.2rem 0 0.5rem; }
+  .person p { margin: 0; color: var(--muted); font-size: 0.97rem; }
+
+
+  /* Company profile (digital ID panel) */
+  .profile { display: grid; grid-template-columns: 1fr 1.1fr; gap: 1.4rem; align-items: start; }
+  .idcard { position: relative; overflow: hidden; padding: 2.2rem; border: 1px solid var(--line-accent); background: linear-gradient(160deg, rgba(57,255,20,0.10), rgba(88,200,255,0.05) 55%, var(--surface)); box-shadow: 0 30px 70px rgba(0,0,0,0.5), inset 0 0 70px rgba(57,255,20,0.04); }
+  .idcard::before, .idcard::after { content: ""; position: absolute; width: 1.3rem; height: 1.3rem; border: 2px solid var(--accent); pointer-events: none; }
+  .idcard::before { top: 0.6rem; left: 0.6rem; border-right: 0; border-bottom: 0; }
+  .idcard::after { bottom: 0.6rem; right: 0.6rem; border-left: 0; border-top: 0; }
+  .scan { position: absolute; left: 0; right: 0; top: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--accent), transparent); box-shadow: 0 0 18px var(--accent); animation: scan 6s linear infinite; opacity: 0.7; }
+  @keyframes scan { from { top: 0; } to { top: 100%; } }
+  .idtop { display: flex; justify-content: space-between; align-items: center; gap: 0.8rem; flex-wrap: wrap; }
+  .badge { border: 1px solid var(--accent); color: var(--accent); font-size: 0.74rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; padding: 0.3rem 0.8rem; background: rgba(57,255,20,0.08); }
+  .status { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; font-weight: 700; color: var(--accent-2); }
+  .status i { width: 0.55rem; height: 0.55rem; border-radius: 50%; background: var(--accent); box-shadow: 0 0 10px var(--accent); animation: pulse 2s ease-in-out infinite; }
+  @keyframes pulse { 50% { opacity: 0.35; } }
+  .idcard h3 { font-family: var(--display); font-size: clamp(1.8rem, 3.4vw, 2.4rem); font-weight: 600; margin-top: 1.6rem; }
+  .idcard .sub { margin: 0.2rem 0 0; color: var(--muted); }
+  .idgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.3rem 1.5rem; margin: 1.9rem 0 1.8rem; }
+  .idgrid dt { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.15rem; }
+  .idgrid dd { margin: 0; font-weight: 700; line-height: 1.4; }
+  .meter .bar { height: 6px; background: rgba(142,209,240,0.14); }
+  .meter .bar span { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--accent), var(--neon)); box-shadow: 0 0 14px rgba(57,255,20,0.6); transition: width 1.2s ease; }
+  .meter small { display: block; margin-top: 0.6rem; color: var(--muted); font-size: 0.85rem; }
+  .right { display: grid; gap: 1.1rem; }
+  .divs { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }
+  .div { padding: 1.5rem; border: 1px solid var(--line); background: var(--surface); transition: border-color .25s; }
+  .div:hover { border-color: var(--line-accent); }
+  .div small { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); }
+  .div h3 { font-family: var(--display); font-size: 1.5rem; font-weight: 600; margin: 0.4rem 0 0.4rem; }
+  .div p { margin: 0; color: var(--muted); font-size: 0.97rem; }
+  @media (max-width: 960px) { .profile { grid-template-columns: 1fr; } }
+  @media (max-width: 620px) { .divs, .idgrid { grid-template-columns: 1fr; } .idcard { padding: 1.6rem; } }
+  @media (prefers-reduced-motion: reduce) { .scan, .status i { animation: none !important; } }
+
+  /* Contact */
+  .contact { display: grid; grid-template-columns: 1fr 1.1fr; gap: 3.5rem; padding: clamp(2rem, 5vw, 4rem); border: 1px solid var(--line-accent); background: linear-gradient(140deg, rgba(57,255,20,0.09), rgba(15,18,25,0.9) 55%), var(--surface); }
+  .contact h2 { font-size: clamp(1.9rem, 4vw, 2.8rem); }
+  .contact .side p { color: #A8DCF3; margin: 1.1rem 0 1.6rem; }
+  .contact .meta { margin: 0; padding: 0; list-style: none; color: var(--muted); font-size: 0.97rem; }
+  .contact .meta li { padding: 0.35rem 0; }
+  .contact .meta strong { color: var(--accent-2); display: inline-block; min-width: 5.5rem; }
+  form.cf { display: grid; gap: 1rem; }
+  .cf label { display: block; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.35rem; }
+  .cf input, .cf textarea { width: 100%; padding: 0.85rem 1rem; background: var(--bg); border: 1px solid var(--line); color: var(--text); font-family: var(--body); font-size: 1rem; }
+  .cf input:focus, .cf textarea:focus { border-color: var(--accent); }
+  .cf textarea { min-height: 8rem; resize: vertical; }
+  .cf .note { font-size: 0.85rem; color: var(--muted); margin: 0; }
+
+  footer { margin-top: 6.5rem; border-top: 1px solid var(--line); padding: 2.2rem 0 6rem; color: var(--muted); font-size: 0.92rem; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.8rem; }
+
+  /* Chat */
+  .chat-btn { position: fixed; right: 1.2rem; bottom: 1.2rem; z-index: 30; display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.85rem 1.4rem; }
+  .chat-btn .dot { width: 0.55rem; height: 0.55rem; border-radius: 50%; background: #03140A; box-shadow: 0 0 0 2px rgba(255,255,255,0.4); }
+  .chat { position: fixed; right: 1.2rem; bottom: 5rem; z-index: 30; width: min(23.5rem, calc(100vw - 2rem)); max-height: min(34rem, calc(100vh - 7rem)); display: none; flex-direction: column; overflow: hidden; background: #10131C; border: 1px solid var(--line-accent); box-shadow: 0 24px 60px rgba(0,0,0,0.6); }
+  .chat.open { display: flex; }
+  .chat header { padding: 0.95rem 1.1rem; background: var(--accent-grad); color: #03140A; display: flex; justify-content: space-between; align-items: center; }
+  .chat header strong { font-family: var(--display); font-size: 1.1rem; }
+  .chat header small { display: block; opacity: 0.8; font-size: 0.78rem; font-weight: 600; }
+  .chat header button { background: rgba(0,0,0,0.15); color: #03140A; border: 0; width: 2rem; height: 2rem; border-radius: 50%; cursor: pointer; font-size: 1.1rem; }
+  .msgs { flex: 1; overflow-y: auto; padding: 1rem; display: flex; flex-direction: column; gap: 0.6rem; min-height: 12rem; }
+  .m { max-width: 88%; padding: 0.6rem 0.9rem; font-size: 0.94rem; line-height: 1.5; }
+  .m.bot { background: var(--surface-2); align-self: flex-start; border-left: 2px solid var(--neon); }
+  .m.me { background: rgba(57,255,20,0.16); border: 1px solid var(--line-accent); align-self: flex-end; }
+  .chips { display: flex; flex-wrap: wrap; gap: 0.4rem; padding: 0 1rem 0.7rem; }
+  .chips button { font-family: var(--body); font-size: 0.8rem; font-weight: 600; padding: 0.35rem 0.75rem; border: 1px solid var(--line-accent); background: transparent; color: var(--accent-2); cursor: pointer; }
+  .chips button:hover { background: rgba(57,255,20,0.1); }
+  .ask { display: flex; gap: 0.5rem; padding: 0.7rem; border-top: 1px solid var(--line); }
+  .ask input { flex: 1; min-width: 0; padding: 0.65rem 0.9rem; border: 1px solid var(--line); background: var(--bg); color: var(--text); font-family: var(--body); font-size: 0.95rem; }
+  .ask button { border: 0; background: var(--accent-grad); color: #03140A; padding: 0 1.1rem; font-weight: 800; cursor: pointer; font-family: var(--body); }
+
+  @media (max-width: 960px) {
+    .creds { grid-template-columns: 1fr 1fr; }
+    .cred:nth-child(3) { border-left: 0; }
+    .cred:nth-child(n+3) { border-top: 1px solid var(--line); }
+    .caps { grid-template-columns: 1fr 1fr; }
+    .explorer { grid-template-columns: 1fr; }
+    .tabs { flex-direction: row; border-right: 0; border-bottom: 1px solid var(--line); overflow-x: auto; }
+    [role="tab"] { border-bottom: 0; border-left: 0; border-bottom: 3px solid transparent; white-space: nowrap; padding: 1.1rem 1.3rem; }
+    [role="tab"][aria-selected="true"] { border-bottom-color: var(--neon); border-left-color: transparent; }
+    .company, .contact { grid-template-columns: 1fr; gap: 2.2rem; }
+    .row { grid-template-columns: 2.5rem 1fr; }
+    .row .tags { grid-column: 2; }
+  }
+  @media (max-width: 620px) {
+    section { padding-top: 4.5rem; }
+    .caps { grid-template-columns: 1fr; }
+    .hero .wrap { padding-top: 4rem; padding-bottom: 4.5rem; }
+    .btn.line { margin-left: 0; margin-top: 0.8rem; }
+    .navr { gap: 1rem; }
+    .navr a.cta { padding: 0.4rem 0.9rem; }
+    .panel { padding: 1.5rem; }
+    .chat-btn span.t { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .steps li { animation: none !important; }
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#top"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-hidden="true"><defs><linearGradient id="mg" gradientUnits="userSpaceOnUse" x1="90" y1="70" x2="430" y2="450"><stop offset="0" stop-color="#39FF14"/><stop offset="0.55" stop-color="#7DFF5A"/><stop offset="1" stop-color="#58C8FF"/></linearGradient><radialGradient id="mr" gradientUnits="userSpaceOnUse" cx="256" cy="256" r="230"><stop offset="0" stop-color="#39FF14" stop-opacity="0.20"/><stop offset="1" stop-color="#39FF14" stop-opacity="0"/></radialGradient></defs><polygon points="256.0,36.0 446.5,146.0 446.5,366.0 256.0,476.0 65.5,366.0 65.5,146.0" fill="#0A0D14"/><polygon points="256.0,36.0 446.5,146.0 446.5,366.0 256.0,476.0 65.5,366.0 65.5,146.0" fill="url(#mr)"/><polygon points="256.0,60.0 425.7,158.0 425.7,354.0 256.0,452.0 86.3,354.0 86.3,158.0" fill="none" stroke="#58C8FF" stroke-opacity="0.28" stroke-width="2"/><polygon points="256.0,36.0 446.5,146.0 446.5,366.0 256.0,476.0 65.5,366.0 65.5,146.0" fill="none" stroke="url(#mg)" stroke-width="7" stroke-linejoin="round"/><circle cx="256.0" cy="36.0" r="9" fill="#58C8FF"/><circle cx="446.5" cy="366.0" r="9" fill="#58C8FF"/><circle cx="65.5" cy="366.0" r="9" fill="#58C8FF"/><g transform="translate(2,5)" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M130,181 H250 M190,181 V321 M290,181 V321 M290,181 H330 A45,45 0 0 1 330,271 H290 M328,271 L378,321" stroke="url(#mg)" stroke-opacity="0.22" stroke-width="44"/><path d="M130,181 H250 M190,181 V321 M290,181 V321 M290,181 H330 A45,45 0 0 1 330,271 H290 M328,271 L378,321" stroke="url(#mg)" stroke-width="26"/><path d="M190,321 V352 H290 V321" stroke="#58C8FF" stroke-width="5"/><circle cx="130" cy="181" r="13" fill="#58C8FF"/><circle cx="130" cy="181" r="5" fill="#07080C"/><circle cx="190" cy="321" r="13" fill="#58C8FF"/><circle cx="190" cy="321" r="5" fill="#07080C"/><circle cx="290" cy="321" r="13" fill="#58C8FF"/><circle cx="290" cy="321" r="5" fill="#07080C"/><circle cx="378" cy="321" r="13" fill="#58C8FF"/><circle cx="378" cy="321" r="5" fill="#07080C"/></g></svg><b>TR ENTERPRISE</b></a>
+    <nav class="navr" aria-label="Main">
+      <a href="#capabilities">Capabilities</a>
+      <a href="#process">Process</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#company">Company</a>
+      <a class="cta" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="hero">
+    <div class="grid-bg" aria-hidden="true"></div>
+    <canvas id="net" aria-hidden="true"></canvas>
+    <div class="wrap">
+      <span class="eyebrow">Technology Division</span>
+      <h1>Enterprise intelligence, <em>engineered in Bangladesh.</em></h1>
+      <p class="lead">AI chatbots, computer vision and data agents that understand Bengali, run on Google Cloud and arrive with clean, documented source code.</p>
+      <a class="btn accent" href="#contact">Discuss a project</a>
+      <a class="btn line" href="#portfolio">View portfolio</a>
+    </div>
+  </div>
+
+  <div class="creds">
+    <div class="cred"><small>Registered</small><span>1st class contractor, Birampur Pourashava</span></div>
+    <div class="cred"><small>Trade license</small><span>Valid until 30 June 2027</span></div>
+    <div class="cred"><small>Recognised</small><span>Google Cloud Gen AI Academy APAC fellow</span></div>
+    <div class="cred"><small>Language</small><span>AI in Bengali and English</span></div>
+  </div>
+
+  <section id="capabilities">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Capabilities</span>
+        <h2>Practical AI for real data, documents and users.</h2>
+      </div>
+      <div class="caps">
+        <div class="cap"><span class="no">01</span><h3>AI chatbots and assistants</h3><p>Assistants that answer from your own documents, in Bengali or English, with a simple interface your team can use on day one.</p></div>
+        <div class="cap"><span class="no">02</span><h3>Computer vision</h3><p>Detect, count and track objects and people in images and video, delivered as an API or a web app.</p></div>
+        <div class="cap"><span class="no">03</span><h3>Data agents</h3><p>Ask questions of databases and spreadsheets in plain language, with checked and traceable answers.</p></div>
+        <div class="cap"><span class="no">04</span><h3>Cloud deployment</h3><p>Working models put online with Docker and Google Cloud, available from any device.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Process</span>
+        <h2>See how a solution is built.</h2>
+        <p>Choose a type of solution to view the steps behind it.</p>
+      </div>
+      <div class="explorer">
+        <div class="tabs" role="tablist" aria-label="Solution types" aria-orientation="vertical">
+          <button role="tab" id="tab0" aria-selected="true" aria-controls="panel" type="button">Document chatbot</button>
+          <button role="tab" id="tab1" aria-selected="false" aria-controls="panel" type="button" tabindex="-1">Vision system</button>
+          <button role="tab" id="tab2" aria-selected="false" aria-controls="panel" type="button" tabindex="-1">Data agent</button>
+        </div>
+        <div class="panel" id="panel" role="tabpanel" aria-labelledby="tab0" aria-live="polite">
+          <ol class="steps" id="steps"></ol>
+          <p class="outcome" id="outcome"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Portfolio</span>
+        <h2>Selected projects.</h2>
+        <p>Built and published by our AI/ML engineer.</p>
+      </div>
+      <div class="rows">
+        <article class="row">
+          <span class="i">01</span>
+          <div><h3>Flood Risk Assistant for Bangladesh</h3><p>An AI assistant that answers flood-risk questions in Bengali, using data stored in BigQuery. <a href="https://github.com/farjanaferdausi-cs50ai/Flood-Risk-Assistant-Bangladesh">View on GitHub</a></p></div>
+          <ul class="tags"><li>Gemini</li><li>Google ADK</li><li>BigQuery</li><li>Bengali</li></ul>
+        </article>
+        <article class="row">
+          <span class="i">02</span>
+          <div><h3>Bengali book chatbot</h3><p>Retrieval-based chatbot that answers questions about a Bengali literary text.</p></div>
+          <ul class="tags"><li>RAG</li><li>ChromaDB</li><li>Gemini</li></ul>
+        </article>
+        <article class="row">
+          <span class="i">03</span>
+          <div><h3>Taka detection API</h3><p>Recognises Bangladeshi Taka note denominations from a photo.</p></div>
+          <ul class="tags"><li>YOLOv11</li><li>FastAPI</li><li>Docker</li></ul>
+        </article>
+        <article class="row">
+          <span class="i">04</span>
+          <div><h3>People flow detection</h3><p>Tracks people in video, counts entries and exits, and draws a movement heatmap.</p></div>
+          <ul class="tags"><li>YOLOv8</li><li>ByteTrack</li></ul>
+        </article>
+        <article class="row">
+          <span class="i">05</span>
+          <div><h3>Medical AI agent</h3><p>Combines several medical databases with web search to answer questions.</p></div>
+          <ul class="tags"><li>LangGraph</li><li>SQLite</li><li>Gemini</li></ul>
+        </article>
+        <article class="row">
+          <span class="i">06</span>
+          <div><h3>AI Coffee Manager agent</h3><p>An agent that manages coffee shop data and updates Google Sheets on request.</p></div>
+          <ul class="tags"><li>ADK</li><li>Cloud Run</li><li>Sheets API</li></ul>
+        </article>
+      </div>
+      <p class="more"><a href="https://github.com/farjanaferdausi-cs50ai">See all projects on GitHub</a></p>
+    </div>
+  </section>
+
+  <section id="company">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Company profile</span>
+        <h2>Registered, licensed and ready to build.</h2>
+        <p>A contractor firm with a dedicated technology division, verified against its trade license.</p>
+      </div>
+      <div class="profile">
+        <div class="idcard">
+          <div class="scan" aria-hidden="true"></div>
+          <div class="idtop">
+            <span class="badge">1st class contractor</span>
+            <span class="status" id="lstatus"><i aria-hidden="true"></i><span id="lstatustext">Active</span></span>
+          </div>
+          <h3>TR Enterprise</h3>
+          <p class="sub">Contracting and technology</p>
+          <dl class="idgrid">
+            <div><dt>Founder and CEO</dt><dd>Md. Firoz Mahmud</dd></div>
+            <div><dt>Issued by</dt><dd>Birampur Pourashava</dd></div>
+            <div><dt>Location</dt><dd>Puratan Bazar, Birampur, Dinajpur</dd></div>
+            <div><dt>Valid until</dt><dd>30 June 2027</dd></div>
+          </dl>
+          <div class="meter">
+            <div class="bar" role="img" aria-label="Portion of the current license period that has passed"><span id="lbar"></span></div>
+            <small id="lmeter"></small>
+          </div>
+        </div>
+        <div class="right">
+          <div class="divs">
+            <div class="div"><small>Division 01</small><h3>Contracting</h3><p>A licensed 1st class contractor firm operating from Birampur, Dinajpur.</p></div>
+            <div class="div"><small>Division 02</small><h3>Technology</h3><p>AI chatbots, computer vision and data agents in Bengali and English.</p></div>
+          </div>
+          <div class="leaders">
+            <div class="person">
+              <div class="av" aria-hidden="true">FM</div>
+              <div><h3>Md. Firoz Mahmud</h3><span class="role">Founder and CEO</span><p>Leads the business. Completed the Outskill Generative AI Mastermind course and holds its certificate.</p></div>
+            </div>
+            <div class="person">
+              <div class="av" aria-hidden="true">FF</div>
+              <div><h3>Farjana Ferdausi</h3><span class="role">AI/ML Engineer</span><p>Builds and deploys the AI projects in the technology division. Google Cloud Gen AI Academy APAC fellow.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact">
+        <div class="side">
+          <span class="eyebrow">Contact</span>
+          <h2>Let us discuss your project.</h2>
+          <p>Tell us about your data and what you want to achieve. We will reply with how we would build it.</p>
+          <ul class="meta">
+            <li><strong>Email</strong> <a data-mail href="#">email</a></li>
+            <li><strong>Address</strong> Puratan Bazar, Birampur, Dinajpur</li>
+          </ul>
+        </div>
+        <form class="cf" id="cf">
+          <div><label for="cn">Your name</label><input id="cn" type="text" required autocomplete="name"></div>
+          <div><label for="ce">Your email</label><input id="ce" type="email" required autocomplete="email"></div>
+          <div><label for="cm">Project details</label><textarea id="cm" required></textarea></div>
+          <button class="btn accent" type="submit">Send enquiry</button>
+          <p class="note">This opens your email app with the message ready to send.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 TR Enterprise. All rights reserved.</span>
+    <span>
+      <a href="https://github.com/farjanaferdausi-cs50ai">GitHub</a> &nbsp;
+      <a href="https://www.linkedin.com/in/farjana-ferdausi/">LinkedIn</a> &nbsp;
+      <a href="https://medium.com/@farjana.rafi1983">Medium</a>
+    </span>
+  </div>
+</footer>
+
+<!-- Company assistant (FAQ bot, runs in the browser) -->
+<button class="btn accent chat-btn" id="chatbtn" type="button" aria-expanded="false" aria-controls="chat"><span class="dot" aria-hidden="true"></span><span class="t">Ask TR Assistant</span><span style="position:absolute;left:-9999px">Open assistant</span></button>
+<div class="chat" id="chat" role="dialog" aria-label="TR Enterprise assistant">
+  <header>
+    <div><strong>TR Assistant</strong><small>Quick answers about TR Enterprise</small></div>
+    <button type="button" id="chatclose" aria-label="Close assistant">&times;</button>
+  </header>
+  <div class="msgs" id="msgs" aria-live="polite"></div>
+  <div class="chips" id="chips"></div>
+  <form class="ask" id="ask" autocomplete="off">
+    <input id="q" type="text" placeholder="Type your question" aria-label="Your question">
+    <button type="submit">Send</button>
+  </form>
+</div>
+
+<script>
+(function () {
+  /* ====== EDIT ONLY THIS LINE: put the company email here ====== */
+  var EMAIL = 'trenterprisebd1@gmail.com';
+  /* ============================================================= */
+
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* Fill every email link from the single EMAIL value */
+  Array.prototype.forEach.call(document.querySelectorAll('[data-mail]'), function (a) { a.href = 'mailto:' + EMAIL; a.textContent = EMAIL; });
+
+  /* Contact form: opens the visitor's email app with the message ready */
+  document.getElementById('cf').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var n = document.getElementById('cn').value.trim(), m = document.getElementById('ce').value.trim(), t = document.getElementById('cm').value.trim();
+    var body = t + '\n\nName: ' + n + '\nEmail: ' + m;
+    window.location.href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent('Project enquiry from ' + n) + '&body=' + encodeURIComponent(body);
+  });
+
+  /* License validity meter (issued 28 Jul 2026, valid until 30 Jun 2027) */
+  (function () {
+    var bar = document.getElementById('lbar'), txt = document.getElementById('lmeter'), st = document.getElementById('lstatustext');
+    if (!bar) return;
+    var start = new Date(2026, 6, 28), end = new Date(2027, 5, 30, 23, 59), now = new Date();
+    var pct = Math.max(0, Math.min(100, (now - start) / (end - start) * 100));
+    if (now > end) { st.textContent = 'Renewal due'; txt.textContent = 'The license period has ended.'; bar.style.width = '100%'; return; }
+    var days = Math.ceil((end - now) / 86400000);
+    txt.textContent = days + ' days remaining in the current license period';
+    setTimeout(function () { bar.style.width = pct.toFixed(1) + '%'; }, 250);
+  })();
+
+  /* Solution explorer */
+  var SOL = [
+    { steps: [['Collect', 'Gather your documents.'], ['Embed', 'Split the text and turn it into embeddings.'], ['Search', 'Find the passages that match a question.'], ['Answer', 'Gemini writes a reply from those passages.'], ['Deliver', 'Web app or API on the cloud.']],
+      out: 'Ask questions about your own files and get answers grounded in them, in Bengali or English. Example: our Bengali book chatbot.' },
+    { steps: [['Collect', 'Gather images or video.'], ['Label', 'Mark the objects that matter.'], ['Train', 'Fine-tune a YOLO model.'], ['Evaluate', 'Test accuracy on unseen data.'], ['Serve', 'Expose it as a FastAPI service.']],
+      out: 'Detect, count and track things in photos or video. Examples: our Taka detection API and people flow detection.' },
+    { steps: [['Connect', 'Link databases or sheets.'], ['Define tools', 'Give the agent safe queries to run.'], ['Plan', 'The agent decides which tool to use.'], ['Verify', 'Check results before answering.'], ['Answer', 'Reply in plain language.']],
+      out: 'Ask plain-language questions of databases and spreadsheets. Examples: our medical AI agent and Flood Risk Assistant.' }
+  ];
+  var stepsEl = document.getElementById('steps'), outEl = document.getElementById('outcome'), panel = document.getElementById('panel');
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
+  function show(i) {
+    stepsEl.innerHTML = '';
+    SOL[i].steps.forEach(function (st, k) {
+      var li = document.createElement('li');
+      var n = document.createElement('div'); n.className = 'n'; n.textContent = k + 1;
+      var h = document.createElement('h3'); h.textContent = st[0];
+      var p = document.createElement('p'); p.textContent = st[1];
+      li.appendChild(n); li.appendChild(h); li.appendChild(p); stepsEl.appendChild(li);
+    });
+    outEl.textContent = SOL[i].out;
+    tabs.forEach(function (t, k) { t.setAttribute('aria-selected', k === i ? 'true' : 'false'); t.tabIndex = k === i ? 0 : -1; });
+    panel.setAttribute('aria-labelledby', 'tab' + i);
+  }
+  tabs.forEach(function (t, i) {
+    t.addEventListener('click', function () { show(i); });
+    t.addEventListener('keydown', function (e) {
+      var j = null;
+      if (e.key === 'ArrowDown' || e.key === 'ArrowRight') j = (i + 1) % tabs.length;
+      if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') j = (i + tabs.length - 1) % tabs.length;
+      if (j !== null) { show(j); tabs[j].focus(); e.preventDefault(); }
+    });
+  });
+  show(0);
+
+  /* Network canvas: green nodes, blue on interaction */
+  var c = document.getElementById('net'), ctx = c.getContext('2d');
+  var W = 0, H = 0, pts = [], mouse = { x: -9999, y: -9999 };
+  var COLORS = ['#39FF14', '#9BFF7D', '#39FF14', '#58C8FF'];
+  var LINK = 140, REACH = 180;
+  function rgba(hex, a) { var n = parseInt(hex.slice(1), 16); return 'rgba(' + (n >> 16) + ',' + ((n >> 8) & 255) + ',' + (n & 255) + ',' + a + ')'; }
+  function resize() {
+    var dpr = Math.min(window.devicePixelRatio || 1, 2), r = c.getBoundingClientRect();
+    W = r.width; H = r.height; c.width = W * dpr; c.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    var n = Math.round(Math.min(85, (W * H) / 14000)); pts = [];
+    for (var i = 0; i < n; i++) pts.push({ x: Math.random() * W, y: Math.random() * H, vx: (Math.random() - 0.5) * 0.26, vy: (Math.random() - 0.5) * 0.26, col: COLORS[i % COLORS.length] });
+  }
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    var i, j, p, q, dx, dy, d, a;
+    for (i = 0; i < pts.length; i++) {
+      p = pts[i];
+      if (!reduce) { p.x += p.vx; p.y += p.vy; if (p.x < 0 || p.x > W) p.vx *= -1; if (p.y < 0 || p.y > H) p.vy *= -1; }
+    }
+    for (i = 0; i < pts.length; i++) {
+      p = pts[i];
+      for (j = i + 1; j < pts.length; j++) {
+        q = pts[j]; dx = p.x - q.x; dy = p.y - q.y; d = Math.sqrt(dx * dx + dy * dy);
+        if (d < LINK) { a = (1 - d / LINK) * 0.3; ctx.strokeStyle = rgba('#39FF14', a); ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y); ctx.stroke(); }
+      }
+      dx = p.x - mouse.x; dy = p.y - mouse.y; d = Math.sqrt(dx * dx + dy * dy);
+      if (d < REACH) {
+        a = 1 - d / REACH;
+        ctx.strokeStyle = rgba('#58C8FF', a * 0.8); ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke();
+        ctx.fillStyle = rgba('#58C8FF', 0.6 + a * 0.4); ctx.beginPath(); ctx.arc(p.x, p.y, 2.4 + a * 2, 0, 6.2832); ctx.fill();
+      } else { ctx.fillStyle = rgba(p.col, 0.75); ctx.beginPath(); ctx.arc(p.x, p.y, 1.8, 0, 6.2832); ctx.fill(); }
+    }
+    if (!reduce) requestAnimationFrame(frame);
+  }
+  var hero = c.parentNode;
+  hero.addEventListener('pointermove', function (e) { var r = c.getBoundingClientRect(); mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top; });
+  hero.addEventListener('pointerleave', function () { mouse.x = mouse.y = -9999; });
+  var rt; window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(function () { resize(); if (reduce) frame(); }, 150); });
+  resize(); frame();
+
+  /* Company assistant: keyword-based FAQ bot (no external service) */
+  var KB = [
+    { k: ['contractor', 'construction', 'tender', 'ঠিকাদার'], a: 'TR Enterprise is registered as a 1st class contractor firm in Birampur, Dinajpur, under a trade license from Birampur Pourashava.' },
+    { k: ['license', 'licence', 'registered', 'legal', 'trade'], a: 'TR Enterprise holds a trade license issued by Birampur Pourashava, valid until 30 June 2027.' },
+    { k: ['build', 'service', 'offer', 'do you do', 'what do you', 'solution', 'ai '], a: 'Our technology division builds AI chatbots, computer vision systems and data agents, and deploys them on the cloud. See the Capabilities section above.' },
+    { k: ['project', 'portfolio', 'work', 'example', 'flood', 'taka', 'medical'], a: 'Recent projects include a Flood Risk Assistant for Bangladesh, a Bengali book chatbot, a Taka detection API, people flow detection and a medical AI agent. All are listed under Portfolio.' },
+    { k: ['bengali', 'bangla', 'language', 'বাংলা'], a: 'Yes. We build assistants that read and answer in Bengali as well as English.' },
+    { k: ['who', 'team', 'founder', 'ceo', 'owner', 'engineer', 'people', 'staff'], a: 'Md. Firoz Mahmud is the Founder and CEO. Farjana Ferdausi is the AI/ML Engineer in the technology division.' },
+    { k: ['where', 'location', 'address', 'based', 'office', 'dinajpur', 'birampur'], a: 'We are based at Puratan Bazar, Birampur, Dinajpur, Bangladesh, and work with clients remotely.' },
+    { k: ['contact', 'email', 'mail', 'hire', 'reach', 'talk', 'start'], a: 'You can reach us at ' + EMAIL + ', or use the contact form on this page. Tell us about your data and what you want to achieve.' },
+    { k: ['price', 'cost', 'quote', 'budget', 'how much', 'fee'], a: 'Pricing depends on the size of the project. Email us at ' + EMAIL + ' with a short description and we will reply with a quote.' },
+    { k: ['cloud', 'deploy', 'host', 'google', 'docker'], a: 'We deploy with Docker and Google Cloud (Cloud Run), so your solution is available online from any device.' },
+    { k: ['about', 'company', 'tr enterprise', 'what is'], a: 'TR Enterprise is a registered contractor firm in Birampur, Dinajpur, with a technology division that builds AI, machine learning and data solutions.' },
+    { k: ['hello', 'hi', 'hey', 'salam', 'assalam'], a: 'Hello! Ask me about our services, projects, team or how to contact us.' }
+  ];
+  var FALLBACK = 'I can answer questions about our services, projects, team, location and contact details. Try one of the suggestions below.';
+  var CHIPS = ['What do you build?', 'Who runs the company?', 'Where are you based?', 'How can I contact you?'];
+  function answer(q) {
+    q = q.toLowerCase() + ' ';
+    var best = null, top = 0;
+    KB.forEach(function (e) {
+      var s = 0;
+      e.k.forEach(function (w) { if (q.indexOf(w) > -1) s += w.length > 4 ? 2 : 1; });
+      if (s > top) { top = s; best = e; }
+    });
+    return best ? best.a : FALLBACK;
+  }
+  var chat = document.getElementById('chat'), btn = document.getElementById('chatbtn'), msgs = document.getElementById('msgs'),
+      chips = document.getElementById('chips'), form = document.getElementById('ask'), input = document.getElementById('q');
+  function add(text, who) { var m = document.createElement('div'); m.className = 'm ' + who; m.textContent = text; msgs.appendChild(m); msgs.scrollTop = msgs.scrollHeight; }
+  function ask(text) { add(text, 'me'); setTimeout(function () { add(answer(text), 'bot'); }, reduce ? 0 : 450); }
+  CHIPS.forEach(function (t) {
+    var b = document.createElement('button'); b.type = 'button'; b.textContent = t;
+    b.addEventListener('click', function () { ask(t); }); chips.appendChild(b);
+  });
+  var greeted = false;
+  function openChat() {
+    chat.classList.add('open'); btn.setAttribute('aria-expanded', 'true');
+    if (!greeted) { add('Hello, I am the TR Enterprise assistant. Ask me anything about the company.', 'bot'); greeted = true; }
+    input.focus();
+  }
+  function closeChat() { chat.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); btn.focus(); }
+  btn.addEventListener('click', function () { chat.classList.contains('open') ? closeChat() : openChat(); });
+  document.getElementById('chatclose').addEventListener('click', closeChat);
+  chat.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeChat(); });
+  form.addEventListener('submit', function (e) { e.preventDefault(); var v = input.value.trim(); if (!v) return; input.value = ''; ask(v); });
+})();
+</script>
+
+</body>
+</html>

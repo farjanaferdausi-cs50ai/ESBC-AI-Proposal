@@ -1,4 +1,4 @@
-<p align="center"><img src="logo.png" alt="ESBC-AI logo" width="200"></p>
+<p align="center"><img src="assets/banner.jpg" alt="ESBC-AI: Easy Service for Bangladeshi Citizens" width="100%"></p>
 
 # ESBC-AI
 
@@ -7,8 +7,8 @@
 > Capstone project by Farjana Ferdausi, AI & ML Engineering Bootcamp, Module-27, Batch-6, Ostad.
 > It is not an official government service and is not affiliated with any government office.
 
-**Detailed proposal page:** https://farjanaferdausi-cs50ai.github.io/ESBC-AI-Proposal/
-**One-page proposal (PDF):** [ESBC-AI_Project_Proposal.pdf](ESBC-AI_Project_Proposal.pdf)
+**Website:** https://farjanaferdausi-cs50ai.github.io/ESBC-AI-Proposal/
+**One-page proposal (PDF):** [docs/ESBC-AI_Project_Proposal.pdf](docs/ESBC-AI_Project_Proposal.pdf)
 
 ## The problem
 
@@ -38,14 +38,16 @@ ESBC-AI is a mobile-first web application that acts as an assistive layer over o
 
 React (mobile-first), FastAPI, Pydantic, LangGraph, LangChain, Gemini, Chroma, OpenCV, Tesseract, Docker. Deployment on Vercel (frontend) and Render (backend).
 
-## Planned repository structure
+## Repository structure
 
 ```
-frontend/   React web app
-backend/    FastAPI service, case database, PDF packet generation
-ai/         ingestion, retrieval, agent, evaluation
-docs/       AI methodology, architecture, screenshots
-data/       official documents (with source URL and date checked) and synthetic test documents
+index.html  proposal website (GitHub Pages)
+assets/     banner, logo and share-preview images
+docs/       one-page project proposal (PDF)
+frontend/   React web app (added during the build)
+backend/    FastAPI service, case database, PDF packet generation (added during the build)
+ai/         ingestion, retrieval, agent, evaluation (added during the build)
+data/       official documents with source URL and date checked, and synthetic test documents (added during the build)
 ```
 
 ## Status
